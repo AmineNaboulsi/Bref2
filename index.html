@@ -22,10 +22,10 @@
                 </div>
                 <nav class="menusection">
                     <ul>
-                        <li>Home Page</li>
-                        <li>Contact</li>
+                        <li><a style="color: var(--OrangeColor);" href="/">Home</a></li>
+                        <li><a href="/Contact.html">Contact</a></li>
                     </ul>
-                    <button>Book a table</button>
+                    <button onclick="GoToBooking()">Book a table</button>
                 </nav>
             </div>   
         </div>
@@ -117,10 +117,10 @@
                     <h6>New arrival</h6>
                     <h2>Fresh Coffee, refresh Memories</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                    <button>Buy Now !</button>
+                    <button onclick="GoToBooking()">Buy Now !</button>
                 </div>
                 <div class="rightareanews">
-                    <img src="https://preview.moxcreative.com/caffe/wp-content/uploads/sites/12/2022/03/coffee-cup-mockup.png"
+                    <img  src="./Assets/coffee-cup-mockup.png"
                     alt="" />
                     <div class="freshcaffe">
                         <div class="freshcaffeC">
@@ -135,29 +135,55 @@
     </section>
     <section class="footers">
         <div class="bgfooter"></div>
-        <footer>
-            <div class="footercontent">
-                <div class="leftfooter">
-                    <h1>Coffe</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+        <div class="container">
+            <footer>
+                <div class="footercontent">
+                    <div class="leftfooter">
+                        <h1>Coffe</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    </div>
+                    <div class="centerfooter">
+                        <div ><h1>Coffee shop</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                            <ul >
+                                <li>
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>hello@yourdomain.tld</span>
+                                </li>
+                                <li>
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>+(62)21 2002-2012</span>
+                                </li>
+                            </ul></div>
+                        
+                    </div>
+                    <div class="rightfooter">
+                        <div>
+                            <h1>Opening Hour</h1>
+                        <ul>
+                            <li>
+                                <i class="fa-regular fa-clock"></i>
+                                <span>Mon - Fri : 7 AM - 4 PM</span>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-clock"></i>
+                                <span>Saturday : 7 AM - 8 PM</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-clock"></i>
+                                <span>Sunday : Close</span>
+                            </li>
+                        </ul>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div class="centerfooter">
-                    <h1>Coffee shop</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <div class="copyright">
+                    <p>Copyright © 2022 Caffe, All rights reserved. Made with ❤️ by Amine .</p>
                 </div>
-                <div class="rightfooter">
-                    <h1>Opening Hour</h1>
-                    <ul>
-                        <li>Mon - Fri : 7 AM - 4 PM</li>
-                        <li>Saturday : 7 AM - 8 PM</li>
-                        <li>Sunday : Close</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>Copyright © 2022 Caffe, All rights reserved. Made with ❤️ by Amine .</p>
-            </div>
-        </footer>
+            </footer>
+        </div>
+       
     </section>
     <script src="js/script.js"></script>
 </body>

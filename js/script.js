@@ -9,3 +9,6 @@ window.onscroll = () => {
 
     }
   };
+  function GoToBooking(){
+    window.location.href  = "./booktable.html";
+  }
