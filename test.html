@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Zoom Effect</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bg-image {
+            position: relative;
+            background-image: url('https://preview.moxcreative.com/caffe/wp-content/uploads/sites/12/2022/03/espresso-cup-of-hot-coffee.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            min-height: 100vh; /* Ensures background image covers at least the viewport height */
+            width: 100%;
+        }
+
+        body {
+            min-height: 100vh; /* Prevents shrinking on zoom out */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Ensures content doesn't affect background height */
+        p {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bg-image"></div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <!-- Add content as needed -->
+    </p>
+</body>
+</html>
