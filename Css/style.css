@@ -35,24 +35,7 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
-/* Small */
-@media (min-width: 768px) {
-    .container {
-      width: 750px;
-    }
-  }
-  /* Medium */
-  @media (min-width: 992px) {
-    .container {
-      width: 970px;
-    }
-  }
-  /* Large */
-  @media (min-width: 1200px) {
-    .container {
-      width: 1170px;
-    }
-}
+
 .seHomeBg{
     height: auto;
     background-color: #000000;
@@ -315,7 +298,7 @@ header{
 }
 .GoodDayS{
     display: grid;
-    grid-template-columns: 240px 240px;
+    grid-template-columns: 240px 240px ;
     gap: 10px;
     transform: translateY(-50px);
     padding-inline: 20px;
@@ -484,7 +467,7 @@ footer{
 
 /*      contact      */
 .contactS{
-    height: 70%;
+    height: auto;
 }
 .bgcontactUs_S{
     position: relative;
@@ -532,9 +515,15 @@ footer{
 }
 /* card contact */
 .contactCards{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    justify-content: center ;
+    gap: 10px;
+    margin-top: 200px;
+}
+.contactCard1 , .contactCard2 , .contactCard3{
     position: relative;
+
 }
 .contactCards span{
     position: absolute;
@@ -559,9 +548,7 @@ footer{
     padding-block: 3rem;
     text-align: center  ;
     border-radius: 10px;
-    transform: translateY(200px);
     min-width: 30%;
-
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -703,15 +690,15 @@ footer{
 }
 
 .freshcaffe{
-    transform: rotate(90deg) ;
+    transform: translateZ(100px) rotate(90deg) ;
+    
     animation: rotatedisk forwards;
     animation-timeline: view();
     animation-range-start: 0px;
     animation-range-end: 500px;
 }
 .rightareanews img{
-    scale: 0.4; opacity: 1;
-    animation: displayanimatedimg forwards;
+    animation: zoomIn forwards;
     animation-timeline: view();
     animation-range-start : 100px;
     animation-range-end: 300px;
@@ -719,12 +706,147 @@ footer{
 
 @keyframes rotatedisk{
     to{
-        transform: rotate(0deg) ;
+        transform: translateZ(0px)  rotate(0deg) ;
     }
 }
+@keyframes bounceInDown {
+    60%,75%,90%,from,to {
+        animation-timing-function: cubic-bezier(0.215,0.61,0.355,1)
+    }
 
+    0% {
+        opacity: 0;
+        transform: translate3d(0,-3000px,0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0,25px,0)
+    }
+
+    75% {
+        transform: translate3d(0,-10px,0)
+    }
+
+    90% {
+        transform: translate3d(0,5px,0)
+    }
+
+    to {
+        transform: none
+    }
+}
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(.3,.3,.3)
+    }
+
+    50% {
+        opacity: 1
+    }
+}
 @keyframes displayanimatedimg{
     to{
         scale: 1; opacity: 1;
+    }
+}
+
+/*      Working on the responsive    */
+
+@media (max-width: 700px) {
+    .CardsAboutUs{
+        display: grid;
+        grid-template-columns:  1fr;
+        transform: translateY(-40px);        
+    }
+    .GoodDayCentent{
+        padding:60px;
+    }
+    .GoodDayCaffe{
+        display: none;
+    }
+    .GoodCaffeS{
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+    .GoodDayS{
+        padding-inline: 0px;
+        transform: translateY(0px);
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+    .GoodDayS div{
+        padding-block: 30px;
+    }
+    .arefreshcaffe{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 300px;
+    }
+    .actionbar{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .freshcaffe{
+        transform: translateZ(0px) rotate(0deg) ;
+        animation: zoomIn forwards;
+        animation-timeline: view();
+        animation-range-start: 0px;
+        animation-range-end: 500px;
+    }
+    .leftareanews{
+        display: flex;
+        flex-direction: column;
+        padding-inline: 30px;
+    }
+    .contactCards{
+        display: grid;
+        grid-template-columns: 1fr   ;
+        justify-content: center ;
+        gap: 10px;
+        margin-top: 200px;
+    }
+    .staywidthus{
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 20px;
+        position: relative;
+    }
+    .contactinfo{
+        display: none;
+    }
+  }
+  @media (max-width: 992px) {
+    .actionbar{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+  
+  }
+  
+/* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
     }
 }
