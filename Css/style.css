@@ -389,12 +389,16 @@ header{
 .newarea{
     height: auto;
 }
-/*  footer  */
+/* ###############################################################
+
+     footer
+
+################################################################## */
 .bgfooter{
     background: url(https://preview.moxcreative.com/caffe/wp-content/uploads/sites/12/2022/03/people-at-the-coffee-shop.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     position: absolute;
 
     top: 0;
@@ -436,10 +440,10 @@ footer{
 .footercontent div ul li i{
     color: var(--DarkGreenColor);
 }
-.footercontent div ul li{
+/* .footercontent div ul li{
     display: flex;
     gap: 10px;
-}
+} */
 .copyright{
     border-top:  1px solid rgb(223, 223, 223);
     padding-block: 3rem;
@@ -465,7 +469,11 @@ footer{
 }
 
 
-/*      contact      */
+/* ###############################################################
+
+     contact page
+
+################################################################## */
 .contactS{
     height: auto;
 }
@@ -559,7 +567,11 @@ footer{
     color: var(--DarkGreenColor);
 }
 
-/*  Contac form     */
+/* ###############################################################
+
+     Contact form
+
+################################################################## */
 
 .contactformS{
     height: auto;
@@ -658,7 +670,30 @@ footer{
 }
 
 
-/*      adding some scrolling animation     */
+/* ###############################################################
+
+     Book table
+
+################################################################## */
+
+.bgtitleimage{
+    height: auto;
+    width: 100%;
+    background-color: #2e2d2d;
+    position: relative;
+}
+.galleryimg{
+    background-color : url(../Assets/coffee-beans.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* ###############################################################
+
+     adding some scrolling animation    
+
+################################################################## */
 
 .CardCoffee-Shop , .CardLounge{
     transform: rotateX(90deg)
@@ -699,11 +734,13 @@ footer{
 }
 .rightareanews img{
     animation: zoomIn forwards;
-    animation-timeline: view();
-    animation-range-start : 100px;
-    animation-range-end: 300px;
+    animation-timeline: view(50vh 0px);
 }
-
+.GoodDayCentent{
+    animation: zoomIn forwards;
+    animation-timeline: view(50vh 0px);
+    
+}
 @keyframes rotatedisk{
     to{
         transform: translateZ(0px)  rotate(0deg) ;
@@ -752,8 +789,15 @@ footer{
     }
 }
 
-/*      Working on the responsive    */
+/* ###############################################################
 
+     Working on the responsive  
+
+################################################################## */
+
+@media (max-width: 700px) {
+    
+}
 @media (max-width: 700px) {
     .CardsAboutUs{
         display: grid;
@@ -819,6 +863,19 @@ footer{
     .contactinfo{
         display: none;
     }
+    .rightareanews img{
+        height: 200px;
+    }
+    .panel-welcom-centent{
+        padding-inline: 0rem;
+        
+    }
+    .footercontent{
+        grid-template-columns: 1fr;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
   }
   @media (max-width: 992px) {
     .actionbar{
@@ -828,13 +885,23 @@ footer{
         justify-content: center;
         align-items: center;
     }
-  
+    .panelWelcome{
+        width: 100%;
+        margin-left: 0;
+     }  
+     .panel-welcom-centent{
+        padding-inline: 1rem;
+        border-radius: 20px;
+    } 
+    .panel-welcom-centent div h1{
+        font-size: 40px;
+    }
   }
   
 /* Small */
 @media (min-width: 768px) {
     .container {
-      width: 750px;
+      width: 850px;
     }
   }
   /* Medium */
