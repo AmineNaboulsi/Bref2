@@ -741,7 +741,7 @@ footer{
 }
 .tabspanel .item{
     width: 240px;
-    height: 200px;
+    height: 260px;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 1px 1px 10px rgba(214, 214, 214, 0.39);
@@ -757,6 +757,15 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.itemdesc h6{
+    background-color: #d8d8d8;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    padding-block: 5px;
 }
 .slidertabs{
     width: 100%;
